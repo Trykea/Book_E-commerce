@@ -7,7 +7,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css" />
     <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      src="https://kit.fontawesome.com/5fcc4fc906.js"
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
@@ -55,25 +55,18 @@
       <section>
         <div class="container">
           <div class="row">
-            <h2 class="section__title books__header--title">
-              All <span class="purple">Books</span>
-            </h2>
-            <div class="book">
-              <figure class="book__img--wrapper">
-                <img class="book__img" src="assets/atomic habits.jpg" alt="" />
-              </figure>
-              <div class="book__title">Atomic Habits</div>
-              <div class="book__ratings">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <div class="book__price">
-                <span class="book__price--normal">$59.95</span> $14.95
-              </div>
+            <div class="books__header">
+              <h2 class="section__title books__header--title">
+                All <span class="text__color">Books</span>
+              </h2>
+              <select id="filter" onchange="filterBooks(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="LOW_TO_HIGH">Price, low to high</option>
+                <option value="HIGH_TO_LOW">Price, high to low</option>
+                <option value="RATING">Rating</option>
+              </select>
             </div>
+            <div class="books"></div>
           </div>
         </div>
       </section>
@@ -84,7 +77,11 @@
         <div class="row row__column">
           <a href="#">
             <figure class="footer__logo">
-              <img src="assets/Library.svg" class="footer__logo--img" alt="" />
+              <img
+                src="assets/sherlock_book_store_logo(tran).png"
+                class="footer__logo--img"
+                alt=""
+              />
             </figure>
           </a>
           <div class="footer__list">
